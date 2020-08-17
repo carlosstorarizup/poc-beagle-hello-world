@@ -1,0 +1,6 @@
+framework module Pods_pocBeagle {
+  umbrella header "Pods-pocBeagle-umbrella.h"
+
+  export *
+  module * { export * }
+}
