@@ -19,9 +19,9 @@ class ScreenComponentIntro {
         return Container(
                 children = listOf(
                         textSample(),
-                        textInputSample(placeholder = "Text Input Sample", styleId = "textInputSample"),
+                        textInputSample(),
                         textPassword(),
-                        inputPasswordText(placeholder = "Password Input Sample",styleId = "inputPasswordText"),
+                        inputPasswordText(),
                         createButton()
                 )
         ).applyStyle(Style
@@ -74,12 +74,8 @@ class ScreenComponentIntro {
                             top = UnitValue(16.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
 
-    fun textInputSample(
-            placeholder: String,
-            styleId: String
-    ) = TextInput(
-            placeholder = placeholder,
-            styleId = styleId)
+    fun textInputSample() = TextInput(
+            placeholder = "Text Input Sample")
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
@@ -95,10 +91,8 @@ class ScreenComponentIntro {
 
 
     fun inputPasswordText(
-            placeholder: String,
-            styleId: String
     ) = TextInput(
-            placeholder = "Type your password",
+            placeholder = "Password Input Sample",
             type = TextInputType.PASSWORD)
             .applyStyle(Style(
                     margin = EdgeValue(
