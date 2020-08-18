@@ -15,14 +15,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
+        guard let windoScene = (scene as? UIWindowScene) else { return }
+             let beagleView = Beagle.screen(.remote(.init(url: "http://localhost:8080/screen")))
+             window = UIWindow(frame: UIScreen.main.bounds)
+             window?.windowScene = windoScene
+             
+             let viewController = ViewController()
+             viewController.beagleScreen = beagleView
+             window?.rootViewController = viewController
+             window?.makeKeyAndVisible()
       
-               guard let windoScene = (scene as? UIWindowScene) else { return }
-              BeagleConfig.config()
-              let beagleScreen = Beagle.screen(.remote(.init(url: "/screen")))
-               window = UIWindow(frame: UIScreen.main.bounds)
-               window?.windowScene = windowScene
-               window?.rootViewController = beagleScreen
-               window?.makeKeyAndVisible()
+//               guard let windoScene = (scene as? UIWindowScene) else { return }
+//              BeagleConfig.config()
+//              let beagleScreen = Beagle.screen(.remote(.init(url: "/Teste")))
+//               window = UIWindow(frame: UIScreen.main.bounds)
+//               window?.windowScene = windoScene
+//               window?.rootViewController = beagleScreen
+//               window?.makeKeyAndVisible()
            }
 
     func sceneDidDisconnect(_ scene: UIScene) {
