@@ -10,5 +10,5 @@ class ScreenController(
         private val screenBeagleService: ScreenBeagleService
 ) {
     @GetMapping("/screen")
-    fun getIntroScreen() = screenBeagleService.createScreenBeagle()
+    fun getIntroScreen() = screenBeagleService.createScreenIntroBeagle()
 }
