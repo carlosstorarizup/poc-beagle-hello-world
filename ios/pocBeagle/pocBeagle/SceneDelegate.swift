@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
         guard let windoScene = (scene as? UIWindowScene) else { return }
-             let beagleView = Beagle.screen(.remote(.init(url: "http://localhost:8080/screen")))
+             let beagleView = Beagle.screen(.remote(.init(url: "http://localhost:8080/intro")))
              window = UIWindow(frame: UIScreen.main.bounds)
              window?.windowScene = windoScene
              

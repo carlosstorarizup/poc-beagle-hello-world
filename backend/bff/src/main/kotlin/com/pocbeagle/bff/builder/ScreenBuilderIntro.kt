@@ -8,11 +8,10 @@ import com.pocbeagle.bff.components.ScreenComponentIntro
 
 class ScreenBuilderIntro : ScreenBuilder {
 
-
     @BeaglePreview
     override fun build() = Screen(
             style = Style(
-                    backgroundColor = "#C6C6C6"),
+                    backgroundColor = "#363636"),
             safeArea = SafeArea(
                     top = true,
                     leading = true,
@@ -22,7 +21,6 @@ class ScreenBuilderIntro : ScreenBuilder {
             child = Container(
                     children = listOf(
                             ScreenComponentIntro().getIntroComponent()
-
                     )))
 
 }
