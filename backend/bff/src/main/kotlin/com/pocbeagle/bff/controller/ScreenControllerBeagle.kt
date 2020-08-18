@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController
 class ScreenController(
         private val screenBeagleService: ScreenBeagleService
 ) {
-    @GetMapping("/screen")
+    @GetMapping("/intro")
     fun getIntroScreen() = screenBeagleService.createScreenIntroBeagle()
+
+    @GetMapping("/page")
+    fun getPageScreen() = screenBeagleService.createScreenPageBeagle()
+
+
 }
