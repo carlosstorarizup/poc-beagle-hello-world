@@ -18,10 +18,10 @@ class ScreenComponentIntro {
     ): Container {
         return Container(
                 children = listOf(
-                        textLogin(),
-                        inputEmailText(placeholder = "Type your Email here ...", styleId = "inputEmailText"),
+                        textSample(),
+                        textInputSample(placeholder = "Text Input Sample", styleId = "textInputSample"),
                         textPassword(),
-                        inputPasswordText(placeholder = "Type password here...",styleId = "inputPasswordText"),
+                        inputPasswordText(placeholder = "Password Input Sample",styleId = "inputPasswordText"),
                         createButton()
                 )
         ).applyStyle(Style
@@ -41,7 +41,7 @@ class ScreenComponentIntro {
         return Container(
                 children = listOf(
                         Button(
-                                text = "Login",
+                                text = "Navigation Button",
                                 onPress = listOf(
                                         Navigate.PushView(
                                                 Route.Remote("/page")))
@@ -67,14 +67,14 @@ class ScreenComponentIntro {
                         bottom = UnitValue(16.0, UnitType.REAL))))
     }
 
-    fun textLogin() = Text ("E-mail:")
+    fun textSample() = Text ("Text Sample:")
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
                             top = UnitValue(16.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
 
-    fun inputEmailText(
+    fun textInputSample(
             placeholder: String,
             styleId: String
     ) = TextInput(
