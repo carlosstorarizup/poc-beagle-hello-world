@@ -18,9 +18,9 @@ class ScreenComponentIntro {
     ): Container {
         return Container(
                 children = listOf(
-                        textLogin(placeholder = "E-mail",styleId = "textLogin"),
+                        textLogin(),
                         inputEmailText(placeholder = "Type your Email here ...", styleId = "inputEmailText"),
-                        textPassword(placeholder = "Password",styleId = "textPassword"),
+                        textPassword(),
                         inputPasswordText(placeholder = "Type password here...",styleId = "inputPasswordText"),
                         createButton()
                 )
@@ -37,14 +37,29 @@ class ScreenComponentIntro {
         )
     }
 
-    fun createButton(): Button {
-        return Button(
-                text = "Login",
-                onPress = listOf(
-                                Navigate.PushView(
-                                Route.Remote("/page")))
+    fun createButton(): Container {
+        return Container(
+                children = listOf(
+                        Button(
+                                text = "Login",
+                                onPress = listOf(
+                                        Navigate.PushView(
+                                                Route.Remote("/page")))
 
+                        ),
+                        Button(
+                                "Alert button",
+                                onPress = listOf(
+                                        Alert(
+                                                "Botão server-driven",
+                                                "Hello World",
+                                                labelOk = "Voltar"
+                                        )
+                                )
+                        )
+                )
         ).applyStyle(Style(
+                flex = Flex(flexDirection = FlexDirection.ROW),
                 margin = EdgeValue(
                         left = UnitValue(16.0, UnitType.REAL),
                         top = UnitValue(16.0, UnitType.REAL),
@@ -52,10 +67,7 @@ class ScreenComponentIntro {
                         bottom = UnitValue(16.0, UnitType.REAL))))
     }
 
-    fun textLogin(
-            placeholder: String,
-            styleId: String
-    ) = Text ("E-mail:")
+    fun textLogin() = Text ("E-mail:")
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
@@ -74,11 +86,7 @@ class ScreenComponentIntro {
                             top = UnitValue(5.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
 
-    fun textPassword(
-            placeholder: String,
-            styleId: String
-
-    ) = Text("Senha:")
+    fun textPassword() = Text("Senha:")
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
