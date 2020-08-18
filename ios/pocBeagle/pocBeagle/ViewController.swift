@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import Beagle
 
 class ViewController: UIViewController {
+      var beagleScreen: BeagleScreenViewController?
+        
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            view.addSubview(beagleScreen!.view)
+            
     }
-
-
+    
 }
 
