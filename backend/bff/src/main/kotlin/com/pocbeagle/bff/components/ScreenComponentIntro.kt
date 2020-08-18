@@ -1,5 +1,6 @@
 package com.pocbeagle.bff.components
 
+import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.widget.action.Alert
@@ -26,6 +27,7 @@ class ScreenComponentIntro {
         ).applyStyle(Style
         (
                 backgroundColor = "#C6C6C6",
+                cornerRadius = CornerRadius(25.0),
                 margin = EdgeValue(
                         top = UnitValue(30.0, UnitType.PERCENT),
                         left = UnitValue(60.0, UnitType.REAL),
@@ -40,7 +42,7 @@ class ScreenComponentIntro {
                 text = "Login",
                 onPress = listOf(
                                 Navigate.PushView(
-                                Route.Remote("http://localhost:8080/page")))
+                                Route.Remote("/page")))
 
         ).applyStyle(Style(
                 margin = EdgeValue(

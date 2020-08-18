@@ -12,6 +12,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val frameLayout = findViewById<FrameLayout>(R.id.fr_server_driven)
         /*/serverDrivenComponent*/
-        frameLayout.loadView(this, ScreenRequest("/serverDrivenComponent"))
+        frameLayout.loadView(this, ScreenRequest("/intro"))
     }
 }
