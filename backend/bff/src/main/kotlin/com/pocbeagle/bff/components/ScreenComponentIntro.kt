@@ -89,7 +89,7 @@ class ScreenComponentIntro {
             styleId: String
     ) = TextInput(
             placeholder = "Type your password",
-            type = TextInputType.PASSWORD)
+            type = TextInputType.NUMBER)
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
