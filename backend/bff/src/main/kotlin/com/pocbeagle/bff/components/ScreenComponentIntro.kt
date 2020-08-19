@@ -48,7 +48,7 @@ class ScreenComponentIntro {
 
                         ),
                         Button(
-                                "Alert button",
+                                    "Alert button",
                                 onPress = listOf(
                                         Alert(
                                                 "Botão server-driven",
