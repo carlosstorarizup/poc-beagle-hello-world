@@ -14,6 +14,4 @@ class ScreenController(
 
     @GetMapping("/page")
     fun getPageScreen() = screenBeagleService.createScreenPageBeagle()
-
-
 }

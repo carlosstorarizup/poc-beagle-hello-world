@@ -5,7 +5,6 @@ import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.widget.layout.*
 import com.pocbeagle.bff.components.ScreenComponentIntro
 
-
 class ScreenBuilderIntro : ScreenBuilder {
 
     @BeaglePreview
@@ -22,5 +21,4 @@ class ScreenBuilderIntro : ScreenBuilder {
                     children = listOf(
                             ScreenComponentIntro().getIntroComponent()
                     )))
-
 }
