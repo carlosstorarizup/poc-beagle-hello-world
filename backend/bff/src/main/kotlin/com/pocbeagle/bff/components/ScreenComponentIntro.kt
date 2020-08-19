@@ -17,10 +17,10 @@ class ScreenComponentIntro {
     ): Container {
         return Container(
                 children = listOf(
-                        textLogin(placeholder = "E-mail",styleId = "textLogin"),
-                        inputEmailText(placeholder = "Type your Email here ...", styleId = "inputEmailText"),
-                        textPassword(placeholder = "Password",styleId = "textPassword"),
-                        inputPasswordText(placeholder = "Type password here...",styleId = "inputPasswordText"),
+                        textLogin(),
+                        inputEmailText(placeholder = "Type data", styleId = "inputEmailText"),
+                        textPassword(),
+                        inputPasswordText(placeholder = "Type number",styleId = "inputNumberText"),
                         createButton()
                 )
         ).applyStyle(Style
@@ -51,8 +51,6 @@ class ScreenComponentIntro {
     }
 
     fun textLogin(
-            placeholder: String,
-            styleId: String
     ) = Text ("E-mail:")
             .applyStyle(Style(
                     margin = EdgeValue(
@@ -72,9 +70,6 @@ class ScreenComponentIntro {
                             top = UnitValue(5.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
     fun textPassword(
-            placeholder: String,
-            styleId: String
-
     ) = Text("Senha:")
             .applyStyle(Style(
                     margin = EdgeValue(
