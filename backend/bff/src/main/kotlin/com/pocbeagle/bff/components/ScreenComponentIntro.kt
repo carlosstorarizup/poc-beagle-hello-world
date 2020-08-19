@@ -37,34 +37,20 @@ class ScreenComponentIntro {
         )
     }
 
-    fun createButton(): Container {
-        return Container(
-                children = listOf(
-                        Button(
-                                text = "Navigation Button",
-                                onPress = listOf(
-                                        Navigate.PushView(
-                                                Route.Remote("/page")))
+    fun createButton(): Button {
+        return Button(
+            text = "Navigation",
+                onPress = listOf(
+                 Navigate.PushView(
+                 Route.Remote("http://localhost:8080/page")))
 
-                        ),
-                        Button(
-                                "Alert button",
-                                onPress = listOf(
-                                        Alert(
-                                                "Botão server-driven",
-                                                "Hello World",
-                                                labelOk = "Voltar"
-                                        )
-                                )
-                        )
-                )
-        ).applyStyle(Style(
-                flex = Flex(flexDirection = FlexDirection.ROW),
+                ).applyStyle(Style(
                 margin = EdgeValue(
                         left = UnitValue(16.0, UnitType.REAL),
                         top = UnitValue(16.0, UnitType.REAL),
                         right = UnitValue(16.0, UnitType.REAL),
                         bottom = UnitValue(16.0, UnitType.REAL))))
+
     }
 
     fun textSample() = Text ("Text Sample:")
@@ -82,7 +68,7 @@ class ScreenComponentIntro {
                             top = UnitValue(5.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
 
-    fun textPassword() = Text("Senha:")
+    fun textPassword() = Text("Number Sample:")
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
@@ -92,8 +78,8 @@ class ScreenComponentIntro {
 
     fun inputPasswordText(
     ) = TextInput(
-            placeholder = "Password Input Sample",
-            type = TextInputType.PASSWORD)
+            placeholder = "Number Input Sample",
+            type = TextInputType.NUMBER)
             .applyStyle(Style(
                     margin = EdgeValue(
                             left = UnitValue(16.0, UnitType.REAL),
