@@ -71,7 +71,6 @@ class ScreenComponentIntro {
                             left = UnitValue(16.0, UnitType.REAL),
                             top = UnitValue(5.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
-
     fun textPassword(
             placeholder: String,
             styleId: String
@@ -82,8 +81,6 @@ class ScreenComponentIntro {
                             left = UnitValue(16.0, UnitType.REAL),
                             top = UnitValue(16.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
-
-
     fun inputPasswordText(
             placeholder: String,
             styleId: String
@@ -95,6 +92,4 @@ class ScreenComponentIntro {
                             left = UnitValue(16.0, UnitType.REAL),
                             top = UnitValue(5.0, UnitType.REAL),
                             right = UnitValue(16.0, UnitType.REAL))))
-
-
 }
